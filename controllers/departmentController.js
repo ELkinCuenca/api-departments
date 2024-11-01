@@ -33,7 +33,7 @@ exports.uploadCSV = (req, res) => {
         res.status(500).json({ error: 'Error al cargar el CSV a la base de datos' });
       } finally {
         client.release();
-        fs.unlinkSync(filePath); // Borra el archivo CSV
+        fs.unlinkSync(filePath);
       }
     });
 };
